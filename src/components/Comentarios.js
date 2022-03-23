@@ -8,7 +8,7 @@ export default class Comentarios extends Component {
       view = this.props.comments.map((item, indice) => {
         return(
           <View style={styles.commentContainer} key={indice}>
-            <Text style={styles.nickname}>{ item.name }</Text>
+            <Text style={styles.nickname}>{ item.nickname }</Text>
             <Text style={styles.comment}>{ item.comment }</Text>
           </View>
         )
