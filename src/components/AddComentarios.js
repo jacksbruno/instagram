@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {
   StyleSheet,
+  Image,
   View,
   Text,
   TextInput,
@@ -8,7 +9,7 @@ import {
   TouchableWithoutFeedback as TWF
 }
 from 'react-native'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/dist/FontAwesome'
 
 export default class AddComentarios extends Component {
   state = {
@@ -33,7 +34,7 @@ export default class AddComentarios extends Component {
             onSubmitEditing={this.handleAddComment}
           />
           <TWF onPress={() => this.setState({ editMode: false })}>
-            <Icon name="facebook" size={15} color="#555" />  
+            <Icon name="close" size={20}/>
           </TWF>
         </View>
       )
@@ -41,7 +42,7 @@ export default class AddComentarios extends Component {
       commentArea = (
         <TWF onPress={() => this.setState({ editMode: true })}>
           <View style={styles.container}>
-            <Icon name="facebook" size={25} color="#555" />
+            <Icon name="comment-o" size={25} style={{marginLeft:10}}/>
             <Text style={styles.caption}>Adicione um comnetário...</Text>
           </View>
         </TWF>
